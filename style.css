@@ -27,6 +27,7 @@ aside {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 body {
   height: 100vh;
@@ -59,13 +60,25 @@ nav {
 main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-template-areas: "projects announcements";
 }
 header {
   grid-area: header;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
-
+.top-header,
+.bottom-header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr;
+}
+.user-welcome {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 6fr;
+}
 .projects {
   grid-area: projects;
 }
