@@ -98,5 +98,28 @@ aside {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+.assignment-container {
+  display: grid;
+  grid-template-rows: 0.3fr 2.9fr;
+}
+.trending-container {
+  display: grid;
+  grid-template-rows: 0.3fr 2.9fr;
+}
+.trending-card {
+  display: grid;
+}
+.trending-card-user {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+.trending-card-user img {
+  grid-row: span 2;
+  place-self: center;
+}
+.trending-card-user p:first-of-type {
+  align-self: end;
+}
 
 /* =========  Navbar styling  ========= */
