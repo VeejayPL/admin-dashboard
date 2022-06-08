@@ -15,14 +15,14 @@
   src: url(./assets/Action_Man-webfont.woff);
 }
 /* To be deleted */
-header,
+/* header,
 nav,
 main,
 ul,
 div,
 aside {
   border: 1px solid black;
-}
+} */
 /* --------------- */
 * {
   margin: 0;
@@ -82,7 +82,7 @@ header {
   grid-auto-flow: column;
   grid-template-columns: 1fr 6fr;
 }
-.projects {
+.cards-container {
   grid-area: projects;
   display: grid;
   grid-template-rows: 0.3fr 6fr;
