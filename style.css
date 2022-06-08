@@ -44,6 +44,7 @@ body {
   width: 98vw;
   height: 98vh;
   margin: 1vh 1vw;
+  /* padding: 10px; */
   background: rgba(254, 255, 254, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -59,6 +60,10 @@ nav {
   display: grid;
   grid-template-rows: 0.2fr 0.4fr 1fr;
   gap: 20px;
+}
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 main {
   grid-area: main;
@@ -123,3 +128,13 @@ aside {
 }
 
 /* =========  Navbar styling  ========= */
+nav .logo {
+  place-self: center start;
+  gap: 10px;
+}
+nav .logo h1 {
+  place-self: center;
+}
+nav .logo img {
+  min-width: 40px;
+}
