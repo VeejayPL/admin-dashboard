@@ -5,6 +5,7 @@
   --color-black: #001a23;
   --color-white: #dbd8f0;
   --color-lime: #89fc00;
+  --background-gradient: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
 }
 @font-face {
   font-family: carbon;
@@ -33,7 +34,7 @@ aside {
 body {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-image: var(--background-gradient);
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -44,7 +45,6 @@ body {
   width: 98vw;
   height: 98vh;
   margin: 1vh 1vw;
-  /* padding: 10px; */
   background: rgba(254, 255, 254, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -59,7 +59,6 @@ nav {
   grid-area: navbar;
   display: grid;
   grid-template-rows: 0.2fr 0.4fr 1fr;
-  gap: 20px;
 }
 .logo {
   display: grid;
@@ -127,21 +126,41 @@ aside {
   align-self: end;
 }
 
+/* =========  Fonts  ========= */
+nav .logo h1 {
+  font-size: clamp(1rem, 1rem + 0.7vw, 2rem);
+}
+nav ul {
+  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+}
+
 /* =========  Navbar styling  ========= */
 nav .logo {
   place-self: center start;
   gap: 10px;
+  padding-left: 8px;
 }
 nav .logo h1 {
+  font-family: action, sans-serif;
   place-self: center;
 }
 nav .logo img {
   min-width: 40px;
 }
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
 nav ul li {
-  padding-left: 20px;
-  padding-bottom: 10px;
+  width: fit-content;
+  padding: 6px 12px 6px 26px;
   display: flex;
   align-items: center;
   gap: 10px;
+  border-radius: 0 16px 16px 0;
+}
+nav ul li:hover {
+  background: var(--color-turquise);
+  font-size: larger;
+  cursor: default;
 }
