@@ -52,6 +52,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr 4fr;
+  column-gap: 50px;
   grid-template-areas:
     "navbar header"
     "navbar main";
@@ -77,11 +78,15 @@ header {
   display: grid;
   grid-template-rows: 1fr 2fr;
 }
-.top-header,
-.bottom-header {
+.top-header {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 3fr 1fr;
+}
+.bottom-header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr 0.1fr;
 }
 .user-welcome {
   display: grid;
@@ -136,6 +141,9 @@ nav .logo h1 {
 nav ul,
 .user p {
   font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+}
+.profile h3 {
+  font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.4rem);
 }
 .user h2 {
   font-size: clamp(0.9rem, 0.9rem + 0.6vw, 1.5rem);
@@ -220,18 +228,18 @@ nav ul li:hover {
 }
 .header-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 2.5vw;
 }
 .header-buttons button {
   width: 6vw;
   padding: 10px 0px 10px 0px;
   border: none;
   border-radius: 20px;
-  background: var(--color-lime);
-  box-shadow: 2px 2px 3px var(--color-black);
+  background: var(--color-black);
+  color: var(--color-lime);
 }
 .header-buttons button:hover {
   transform: scale(1.1);
-  background: var(--color-turquise);
 }
