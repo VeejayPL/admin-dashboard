@@ -6,6 +6,7 @@
   --color-white: #dbd8f0;
   --color-lime: #89fc00;
   --background-gradient: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  --background-opacity: rgba(254, 255, 254, 0.4);
 }
 @font-face {
   font-family: carbon;
@@ -45,7 +46,7 @@ body {
   width: 98vw;
   height: 98vh;
   margin: 1vh 1vw;
-  background: rgba(254, 255, 254, 0.4);
+  background: var(--background-opacity);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: grid;
@@ -58,7 +59,8 @@ body {
 nav {
   grid-area: navbar;
   display: grid;
-  grid-template-rows: 0.2fr 0.4fr 1fr;
+  grid-template-rows: 0.2fr 0.4fr 2fr;
+  gap: 20px;
 }
 .logo {
   display: grid;
@@ -79,7 +81,7 @@ header {
 .bottom-header {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 .user-welcome {
   display: grid;
@@ -128,20 +130,28 @@ aside {
 
 /* =========  Fonts  ========= */
 nav .logo h1 {
+  font-family: action, sans-serif;
   font-size: clamp(1rem, 1rem + 0.7vw, 2rem);
 }
-nav ul {
+nav ul,
+.user p {
   font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+}
+.user h2 {
+  font-size: clamp(0.9rem, 0.9rem + 0.6vw, 1.5rem);
+}
+.header-buttons button {
+  font-size: clamp(0.3rem, 0.5rem + 0.4vw, 1rem);
+  font-weight: bold;
 }
 
 /* =========  Navbar styling  ========= */
 nav .logo {
-  place-self: center start;
+  place-self: start;
   gap: 10px;
-  padding-left: 8px;
+  padding-left: 5px;
 }
 nav .logo h1 {
-  font-family: action, sans-serif;
   place-self: center;
 }
 nav .logo img {
@@ -163,4 +173,65 @@ nav ul li:hover {
   background: var(--color-turquise);
   font-size: larger;
   cursor: default;
+}
+
+/* =========  Header styling  ========= */
+.searchbar {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchbar label {
+  padding-top: 5px;
+}
+.searchbar input {
+  padding: 0px 10px;
+  height: 3.6vh;
+  width: 80%;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 2px 3px 5px var(--color-black);
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.profile img {
+  max-width: 15%;
+}
+.user-welcome img {
+  max-width: 80%;
+  place-self: center;
+}
+.user-welcome img,
+.profile img:nth-child(2) {
+  background: var(--color-lime);
+  border-radius: 80px;
+  padding: 2px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.header-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-buttons button {
+  width: 6vw;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 20px;
+  background: var(--color-lime);
+  box-shadow: 2px 2px 3px var(--color-black);
+}
+.header-buttons button:hover {
+  transform: scale(1.1);
+  background: var(--color-turquise);
 }
