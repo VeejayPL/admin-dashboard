@@ -138,13 +138,19 @@ nav .logo h1 {
   font-size: clamp(1rem, 1rem + 0.7vw, 2rem);
 }
 nav ul,
-.user p {
+.user p,
+.card p,
+.assignment-card p,
+.trending-card-user p {
   font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
 }
 .profile h3 {
   font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.4rem);
 }
-.user h2 {
+.user h2,
+.cards-container h2,
+.assignment-container h2,
+.trending-container h2 {
   font-size: clamp(0.9rem, 0.9rem + 0.6vw, 1.5rem);
 }
 .header-buttons button {
