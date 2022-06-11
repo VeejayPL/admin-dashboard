@@ -92,7 +92,7 @@ header {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   column-gap: 20px;
   row-gap: 20px;
@@ -142,7 +142,7 @@ nav ul,
 .card p,
 .assignment-card p,
 .trending-card-user p {
-  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+  font-size: clamp(0.8rem, 0.5rem + 0.45vw, 1rem);
 }
 .profile h3 {
   font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.4rem);
