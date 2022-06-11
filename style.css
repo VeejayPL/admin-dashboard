@@ -22,6 +22,7 @@
   box-sizing: border-box;
   list-style: none;
 }
+
 body {
   min-height: 95vh;
   width: 100%;
@@ -93,7 +94,7 @@ header {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
   column-gap: 20px;
   row-gap: 20px;
   padding-bottom: 20px;
@@ -135,26 +136,27 @@ aside {
 /* =========  Fonts  ========= */
 nav .logo h1 {
   font-family: action, sans-serif;
-  font-size: clamp(1rem, 1rem + 0.7vw, 2rem);
-}
-nav ul,
-.user p,
-.card p,
-.assignment-card p,
-.trending-card-user p {
-  font-size: clamp(0.8rem, 0.5rem + 0.45vw, 1rem);
-}
-.profile h3 {
-  font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.4rem);
+  font-size: clamp(1rem, 1.2rem + 0.4vw, 2rem);
 }
 .user h2,
 .cards-container h2,
 .assignment-container h2,
 .trending-container h2 {
-  font-size: clamp(0.9rem, 0.9rem + 0.6vw, 1.5rem);
+  font-size: clamp(1rem, 1.1rem + 0.3vw, 1.8rem);
 }
+.profile h3 {
+  font-size: clamp(0.4rem, 0.9rem + 0.5vw, 1.2rem);
+}
+nav ul,
+.user p,
+.card p,
+.assignment-card p,
+.trending-card-user p,
 .header-buttons button {
-  font-size: clamp(0.3rem, 0.5rem + 0.4vw, 1rem);
+  font-size: clamp(0.3rem, 0.6rem + 0.5vw, 0.7rem);
+}
+
+.header-buttons button {
   font-weight: bold;
 }
 
@@ -263,7 +265,7 @@ nav ul li:hover {
   padding: 0px 10px;
 }
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .card .icons {
   align-self: flex-end;
@@ -293,7 +295,7 @@ nav ul li:hover {
 }
 .assignment-card p {
   border-bottom: 3px solid var(--color-turquise);
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 .assignment-card p:last-child {
   border: none;
@@ -306,4 +308,22 @@ nav ul li:hover {
 }
 .trending-card-user:nth-child(even) > img {
   background: linear-gradient(90deg, #00dbde 0%, #89fc00 100%);
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  .assignment-card p {
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 1247px), (-webkit-device-pixel-ratio: 1.5) {
+  .main-container {
+    height: 120vh;
+  }
+  .assignment-card p {
+    padding-bottom: 5px;
+  }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
