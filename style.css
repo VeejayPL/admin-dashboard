@@ -333,6 +333,37 @@ nav ul li:hover {
 }
 @media (max-width: 870px) {
   .main-container {
-    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+    padding: 0px 5px;
+    position: relative;
+  }
+  nav .logo {
+    visibility: hidden;
+    width: 0%;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+  nav .primary-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    justify-content: space-around;
+    gap: 0;
+  }
+  nav .secondary-links {
+    visibility: hidden;
+    width: 0%;
+  }
+  nav .primary-links li {
+    padding: 0;
+    gap: 3%;
   }
 }
