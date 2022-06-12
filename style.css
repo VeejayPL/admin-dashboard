@@ -96,7 +96,7 @@ header {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   column-gap: 20px;
   row-gap: 20px;
   padding-bottom: 20px;
@@ -144,7 +144,7 @@ nav .logo h1 {
 .cards-container h2,
 .assignment-container h2,
 .trending-container h2 {
-  font-size: clamp(1rem, 1.1rem + 0.3vw, 1.8rem);
+  font-size: clamp(1rem, 1rem + 0.1vw, 1.2rem);
 }
 .profile h3 {
   font-size: clamp(0.4rem, 0.9rem + 0.5vw, 1.2rem);
@@ -152,6 +152,8 @@ nav .logo h1 {
 nav ul,
 .user p,
 .card p,
+.card h3,
+.assignment-card h4,
 .assignment-card p,
 .trending-card-user p,
 .header-buttons button {
@@ -297,7 +299,7 @@ nav ul li:hover {
 }
 .assignment-card p {
   border-bottom: 3px solid var(--color-turquise);
-  padding-bottom: 20px;
+  padding-bottom: 0.5vw;
 }
 .assignment-card p:last-child {
   border: none;
@@ -314,7 +316,7 @@ nav ul li:hover {
 
 @media (-webkit-device-pixel-ratio: 1.25) {
   .assignment-card p {
-    padding-bottom: 0.7vw;
+    padding-bottom: 10px;
   }
 }
 
